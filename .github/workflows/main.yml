@@ -13,7 +13,7 @@ jobs:
         run: terraform fmt -recursive -check
       - name: Initialize
         run: terraform init
-      - name: Resource Check
+      - name: Resource Check # resources are not allowed in config modules
         run: terraform plan -detailed-exitcode
       - name: Apply
         run: terraform apply
